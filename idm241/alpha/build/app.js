@@ -1,5 +1,7 @@
 var menu = document.getElementById("menu");
 var bottom = document.getElementById("bottom");
+var bottom2 = document.getElementById("bottom2");
+var nav = document.getElementById("nav");
 var item1 = document.getElementById("one");
 var item2 = document.getElementById("two");
 var item3 = document.getElementById("three");
@@ -12,18 +14,7 @@ menu.onmouseover = function() {mouseOver()};
 menu.onmouseout = function() {mouseOut()};
 
 function mouseOver() {
-  bottom.style.marginTop = "225px";
-  bottom.style.transition = "all 0.75s";
-  onHover();
-}
-
-function mouseOut() {
-  bottom.style.marginTop = "0px";
-  bottom.style.transition = "all 0.75s";
-  offHover();
-}
-
-function onHover() {
+  linesOn();
   item1On();
   item2On();
   item3On();
@@ -33,7 +24,8 @@ function onHover() {
   item7On();
 }
 
-function offHover() {
+function mouseOut() {
+  linesOff();
   item7Off();
   item6Off();
   item5Off();
@@ -41,6 +33,29 @@ function offHover() {
   item3Off();
   item2Off();
   item1Off();
+}
+
+function linesOn() {
+  bottom.style.opacity = "0%";
+  bottom.style.transition = "0s";
+  bottom.style.transitionDelay = "0s";
+  bottom.style.transitionTimingFunction = "ease-in-out";
+  
+  bottom2.style.opacity = "100%";
+  bottom2.style.transition = "0.25s";
+  bottom2.style.transitionDelay = "0.25s";
+  bottom2.style.transitionTimingFunction = "ease-in-out";
+}
+
+function linesOff() {
+  bottom.style.opacity = "100%";
+  bottom.style.transition = "0.15s";
+  bottom.style.transitionDelay = "0.5s";
+  bottom.style.transitionTimingFunction = "ease-in-out";
+  
+  bottom2.style.opacity = "0%";
+  bottom2.style.transitionDelay = "0.2s";
+  bottom2.style.transitionTimingFunction = "ease-in-out";
 }
 
 function item1On() {
