@@ -3,19 +3,16 @@ a {
 }
 
 h1 {
-    font-family: "Big Caslon";
     font-size: 3rem;
-    margin: 5rem 0 8rem;
+    margin: 5rem 0 5rem;
 }
 
 h2 {
-    font-family: "Big Caslon";
     font-size: 2.25rem;
     font-weight: lighter;
 }
 
 h4 {
-    font-family: "Big Caslon";
     font-size: 1.25rem;
     font-weight: lighter;
 }
@@ -36,10 +33,7 @@ img {
 
 body {
     background: radial-gradient(#DFAF9A, #C4D6E4);
-}
-
-.menu {
-    z-index: 80;
+    font-family: "Big Caslon";
 }
 
 .images {
@@ -56,7 +50,7 @@ body {
 .container {
     display: flex;
     justify-content: space-evenly;
-    margin: 0 10%;
+    margin: 7% 10%;
 }
 
 .triggersFeedback, .loopsRules {
@@ -82,17 +76,18 @@ body {
     list-style: none;
     text-align: right;
     font-size: 1.5rem;
-    position: relative;
+    margin-top: 0px;
+    margin-bottom: 15px;
 }
 
-.top, .bottom {
+.top, .bottom, .bottom2 {
     width: 30px;
     height: 2px;
     background-color: black;
     margin-left: 75%;
 }
 
-.items ul li {
+.nav-items li, .bottom2 {
   opacity: 0%;
 }
 
