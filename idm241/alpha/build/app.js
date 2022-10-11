@@ -14,6 +14,7 @@ menu.onmouseover = function() {mouseOver()};
 menu.onmouseout = function() {mouseOut()};
 
 function mouseOver() {
+  menu.style.cursor = "pointer";
   linesOn();
   item1On();
   item2On();
