@@ -1,0 +1,141 @@
+a {
+    color: black;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 5rem 0 5rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    font-weight: lighter;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: lighter;
+}
+
+hr {
+    border-color: black;
+    border-width: .5px;
+}
+
+li {
+    font-family: "Inter";
+    padding-bottom: 5%;
+}
+
+body {
+    background: radial-gradient(#DFAF9A, #C4D6E4);
+    font-family: "Big Caslon";
+    margin-bottom: 10%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 7% 10%;
+}
+
+.triggersFeedback, .loopsRules {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 35%;
+    height: 600px;
+}
+
+.hoverStates {
+    margin-left: 7%;
+}
+
+
+/*BUILD CONTENT*/
+.build {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-items {
+    list-style: none;
+    text-align: right;
+    font-size: 1.5rem;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.top, .bottom, .bottom2 {
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    margin-left: 75%;
+}
+
+.nav-items li, .bottom2 {
+  opacity: 0%;
+}
+
+.indent {
+    transform: translateX(0px);
+    transition: transform 0.45s ease;
+  }
+  
+.indentMake {
+color: #f1cf67;
+transform: translateX(-15px);
+}
+
+
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 950px) {
+    h1 {
+        margin: 5rem 0 5rem;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .loopsRules {
+        flex-direction: column-reverse;
+    }
+
+    .triggersFeedback, .loopsRules {
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 592px) {
+    h1 {
+        margin: 5rem 0 3rem 10%;
+    }
+
+    .triggersFeedback, .loopsRules {
+        width: 75%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    h1 {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        margin-left: 10%;
+    }
+}
