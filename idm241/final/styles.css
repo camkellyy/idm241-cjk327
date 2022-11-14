@@ -1,0 +1,151 @@
+a {
+    color: black;
+}
+
+h1 {
+    font-family: "Big Caslon";
+    font-size: 3rem;
+    margin: 5rem 0 8rem;
+}
+
+h2 {
+    font-family: "Big Caslon";
+    font-size: 2.25rem;
+    font-weight: lighter;
+}
+
+h4 {
+    font-family: "Big Caslon";
+    font-size: 1.25rem;
+    font-weight: lighter;
+}
+
+hr {
+    border-color: black;
+    border-width: .5px;
+}
+
+li {
+    font-family: "Inter";
+    padding-bottom: 5%;
+}
+
+img {
+    width: 15%;
+}
+
+.middle {
+    width: 75%;
+}
+
+body {
+    background: radial-gradient(#DFAF9A, #C4D6E4);
+}
+
+.images {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 60% 10% 70% 10%;
+}
+
+li:nth-child(1) {
+    list-style-type: none;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.triggersFeedback, .loopsRules {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 35%;
+    height: 600px;
+}
+
+.hoverStates {
+    margin-left: 7%;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        margin: 70% 10% 80% 10%;
+    }
+}
+
+@media screen and (max-width: 1075px) {
+    .container {
+        margin: 80% 10% 90% 10%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        margin: 90% 10% 100% 10%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    h1 {
+        margin: 5rem 0 5rem;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .loopsRules {
+        flex-direction: column-reverse;
+    }
+
+    .triggersFeedback, .loopsRules {
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 592px) {
+    h1 {
+        margin: 5rem 0 3rem 10%;
+    }
+
+    .triggersFeedback, .loopsRules {
+        width: 75%;
+        height: 100%;
+    }
+
+    img {
+        width: 45%;
+        margin-bottom: 5%;
+    }
+
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    h1 {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        margin-left: 10%;
+    }
+}
