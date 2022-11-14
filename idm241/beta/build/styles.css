@@ -28,7 +28,7 @@ li {
 }
 
 body {
-    background: radial-gradient(#DFAF9A, #C4D6E4);
+    background: rgb(255, 255, 255);
     font-family: "Big Caslon";
     margin-bottom: 10%;
 }
