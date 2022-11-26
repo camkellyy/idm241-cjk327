@@ -2,6 +2,10 @@ a {
     color: black;
 }
 
+body {
+    font-family: "Big Caslon";
+}
+
 h1 {
     font-family: "Big Caslon";
     font-size: 3rem;
