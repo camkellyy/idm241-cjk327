@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study</title>
+</head>
+
+<header class="hero-img" style="background-image: url(hero.png);"></header>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="overview">
+                <h1>Overview</h1>
+                <p>The navigation menu on Happy Cog’s website does not meet the microinteraction standards that are seen throughout the rest of the site. I decided to enhance the navigation by adding several meaningful microinteractions throughout. I split my work up into 3 phases and created detailed descriptions of triggers, rules, feedback, and loops/modes in order to help me through the development phase. While coding, I ran into a few issues including css transitions and function delays. I was able to pass these roadblocks through debugging and ideating. In the end, I created a final interaction that embraced the polished feel of the Happy Cog site with thoughtful microinteractions, learning about the ideating and debugging process along the way.</p>
+            </div>
+        
+            <div class="context">
+                <h1>Context & Challenge</h1>
+        
+                <div class="background">
+                    <h3>Background</h3>
+                    <p>Happy Cog is a digital agency site that I frequent to gain inspiration from other creative minds. There are a number of microinteractions that enhance the overall experience of their site. With this in mind, there is a prominent aspect of the site that does not meet the standards of the rest of the site: their navigation menu. </p>
+                </div>
+        
+                <div class="description">
+                    <h3>Description</h3>
+                    <p>Over these last 10 weeks, I took it upon myself, working individually, to improve the microinteractions within the navigation bar, focusing on hovers and clicks of the menu and its items, in order to raise the cleaness and thoughtfulness of the navigation to the level of the rest of the Happy Cog site.</p>
+                </div>
+        
+                <div class="problem">
+                    <h3>The Problem</h3>
+                    <p>The main issue with the current navigation is the lack of microinteractions within. There is only a hover on interaction that opens the menu. Although this interaction is executed well, the design choice to only have one microinteraction does not match up with the rest of the site, as there are quite a lot of microinteractions throughout that elevate the site.</p>
+                    <p>Adding more thoughtful microinteractions within the navigation will not only improve the user experience, but will make the site more cohesive and polished overall.</p>
+                    <div class="images"><img class="original" src="original.png" alt=""></div>
+                </div>
+        
+                <div class="goals">
+                    <h3>Goals & Objectives</h3>
+                    <p>Before beginning to build out each individual microinteraction, I wrote a detailed description of all of the triggers, rules, feedback, and loops/modes. I used that as a basic metric for ensuring my microinteractions were successful.</p>
+                    <p>I also broke up the process into 3 pieces: Alpha, Beta, and Final, each with equal time to create my description and then to develop. Breaking my work up this way allowed me to reach my goal of the final interaction build.</p>
+                </div>
+            </div>
+        
+            <div class="process">
+                <h1>Process & Insight</h1>
+        
+                <div class="alpha">
+                    <h3>Alpha</h3>
+                    <p>I began with Alpha designs, which included the on and off hover for the menu. Like I mentioned, the current navigation has an on hover that is executed well. I decided to keep that interaction and build an off hover trigger event to go with it. This was manageable as I already had the on hover to use as a template</p>
+                </div>
+        
+                <div class="beta">
+                    <h3>Beta</h3>
+                    <p>The next phase of microinteractions were focused on the menu items. I wanted to show when a menu item was being hovered over. I chose to go with a color and position change. Changing the color on hover is a common microinteraction, so I ran into no issues there. However, when it came to the position change, some problems arose.</p>
+                </div>
+        
+                <p><b>Position Interaction</b></p>
+        
+                <div class="beta-description">
+                    <p><i>Description</i></p>
+                    <p>For the position change, my description called for the menu items to begin translated 15 px to the left with an ease-in-out. The goal of this is to have the menu items react in a smooth wave-like movement when hovered over. </p>
+                </div>
+        
+                <div class="beta-problem">
+                    <p><i>Problem</i></p>
+                    <p>I was noticing that my css translations and transforms were not being applied to the menu list items. After doing some debugging, I noticed that in my initial alpha build, I was already applying translate and transforms to the same menu list items elements. </p>
+                </div>
+        
+                <div class="beta-solution">
+                    <p><i>Solution</i></p>
+                    <p>As a fix, I encased each of my menu list items inside of div elements, that was I can apply the translate and transform for my beta build on the div, rather than change all of my code from my alpha. This was a quick fix that allowed me to keep up with my goals.</p>
+                </div>
+        
+                <div class="beta-comments">
+                    <p><i>Additional Comments</i></p>
+                    <p>There is also a jittering bug that occurs when the mouse is on the very edge of the menu item div after the translation occurs. Unfortunately, this was not a problem that I could fix, due to time, but is something I plan to fix in the future. In the meantime, I decreased the translation from 15px to 5px to decrease the chances of the bug occurring.</p>
+                </div>
+        
+                <div class="final">
+                    <h3>Final</h3>
+                    <p>The final phase of my microinteractions were to look at selected menu items individually, and within the entire menu. Adding an asterisk next the the item that had been selected, or clicked, was all that needed to be done, so I ran into no issues there. However, I ran into a few issues when dealing with the entire menu.</p>
+                </div>
+        
+                <p><b>Selected Menu Item Interaction</b></p>
+        
+                <div class="final-description">
+                    <p><i>Description</i></p>
+                    <p>When a menu item is clicked, the menu item displayed in between the menu lines, let's call this the top selected menu item, in the menu’s off hover state needs to be updated. I accomplished this by changing the display of the item. When the menu expands on hover, the display is changed to none, and when the menu collapses off hover, the display is changed to block.</p>
+                </div>
+        
+                <div class="final-problem">
+                    <p><i>Problem</i></p>
+                    <p>The change to block display of the menu item during the collapse of the menu was happening simultaneously as the menu items faded out. This means that the top selected menu item was appearing before the menu fully collapsed. </p>
+                    <p>After trying various solutions to this issue such as calling setTimeout() to delay the call of the function, toggling between css display states, adding and removing css classes containing display states, and more, nothing seemed to be working. </p>
+                </div>
+        
+                <div class="final-solution">
+                    <p><i>Solution</i></p>
+                    <p>I decided to use opacity to mimic the delay of appearance I was trying to accomplish with my other fix attempts. By giving the top selected menu item an opacity of 0% while display: none on menu expansion, I was able to transition the opacity back to 100% while display: block on menu collapse with a delay that matched up to the timing of the menu collapse. </p>
+                    <div class="images"><img class="new" src="new.png" alt=""></div>
+                </div>
+        
+                <div class="solution">
+                    <h1>The Solution</h1>
+                    <p>The final interaction of Happy Cog’s navigation was inspired by the rest of the site. Scattered throughout are many thoughtful and creative microinteractions that elevate their site. I wanted to keep this in mind when enhancing their navigation menu, adding meaningful interactions wherever I could. By doing this, the site will feel more polished and cohesive.</p>
+                    <p>To start off the microinteractions, there is an on hover trigger that expands the menu by having the menu items fade in and down in a descending order. To go with this, is an off hover trigger that collapses the menu by having the menu items fade out and up in an ascending order. </p>
+                    <p>Next we have hover states for the menu items by changing the color to Happy Cog’s yellow, and translating the position of the item to the left by 5px. Continuing with the menu items, there is an on click trigger that adds an asterisk next to the item to indicate it has been selected.</p>
+                    <p>Finally, we have the off hover trigger when an item is selected, that displays the selected menu item in between the menu items so they are always aware of what page they are on. </p>
+                    <p class="button-margin">The combination of these microinteractions gives the navigation menu a more put together feel and ties in with the other microinteractions throughout the site.</p>
+                    <a class="button" href="https://camkelly.net/idm241/final/build/" target="_blank"><b>SOLUTION</b></a>
+                </div>
+        
+                <div class="results">
+                    <h1>The Results</h1>
+                    <p>I feel this project was a success. The original navigation was quite bland and didn’t match the level of the rest of that Happy Cog site. My additions and improvements make the navigation feel like a part of the flow of the site and makes the site more cohesive and polished overall, solving the initial problem. </p>
+                    <p>The microinteraction builds for each 3 stages were always complete and accurate when matched up to the descriptions I had written as measures for success. This taught me how helpful planning and writing out interactions can be before building. I approached and overcame multiple roadblocks that taught me the importance of debugging. Overall, I learned a lot about the building of microinteractions, from research and descriptions to coding and debugging.</p>
+                </div>
+        
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
